@@ -41,9 +41,9 @@ def export_image(image, region, out_name, scale=10):
 
     # Create download request
     request = {
-        "image": image.serialize(),
+        "image": image,
         "scale": scale,
-        "region": region,
+        "region": region.getInfo()['coordinates'],
         "filePerBand": False
     }
 
@@ -66,3 +66,4 @@ def export_image(image, region, out_name, scale=10):
     except Exception as e:
         logger.error(f"Local download failed for {out_name}: {e}")
         return None
+    
