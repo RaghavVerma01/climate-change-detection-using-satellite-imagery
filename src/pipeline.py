@@ -30,8 +30,6 @@ def run_pipeline(config_path="config/regions.json"):
 
             #t1 composite
             img_t1, region = get_s2_composite(tbbox,t1["start"],t1["end"])
-            info = img_t1.getInfo()
-            print("Here is info: ",info)
             export_image(img_t1,region,f"{tid}_t1")
 
             #t2 composite
