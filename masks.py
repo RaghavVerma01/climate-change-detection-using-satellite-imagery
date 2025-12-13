@@ -106,7 +106,10 @@ def process_tile(tid):
 if __name__ == "__main__":
     # identify all unique Tile IDs based on T1 files
     files = os.listdir(INPUT_DIR)
-    tile_ids = sorted(list(set([f.split("_t")[0] for f in files if "_t1.tif" in f])))
+    
+    # --- THE FIX IS HERE ---
+    # Use .replace() instead of .split() to handle underscores safely
+    tile_ids = sorted(list(set([f.replace("_t1.tif", "") for f in files if f.endswith("_t1.tif")])))
     
     print(f"Starting mask generation for {len(tile_ids)} pairs...")
     

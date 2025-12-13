@@ -1,18 +1,44 @@
 {
-"amazon_deforestation": {
-    "bbox": [
-        -63.65,
-        -9.85,
-        -63.45,
-        -9.65
-    ],
-    "t1": {
-        "start": "2019-06-01",
-        "end": "2019-09-30" 
+    "amazon_rondonia": {
+        "description": "Fishbone deforestation, tropical, red soil",
+        "bbox": [-63.65, -9.85, -63.45, -9.65],
+        "t1": { "start": "2019-06-01", "end": "2019-09-01" },
+        "t2": { "start": "2021-06-01", "end": "2021-09-01" }
     },
-    "t2": {
-        "start": "2021-06-01",
-        "end": "2021-09-30"
+    "california_dixie_fire": {
+        "description": "Wildfire burn scars, temperate conifer, mountains",
+        "bbox": [-121.45, 40.05, -121.25, 40.25],
+        "t1": { "start": "2020-05-01", "end": "2020-06-30" },
+        "t2": { "start": "2021-09-15", "end": "2021-10-30" }
+    },
+    "borneo_palm_oil": {
+        "description": "Industrial plantation clearing, tropical, cloudy",
+        "bbox": [114.0, -2.5, 114.2, -2.3],
+        "t1": { "start": "2019-01-01", "end": "2019-12-30" },
+        "t2": { "start": "2021-01-01", "end": "2021-12-30" }
+    },
+    "germany_harz_beetle": {
+        "description": "Bark beetle infestation, dead grey trees vs green",
+        "bbox": [10.55, 51.75, 10.75, 51.95],
+        "t1": { "start": "2018-05-01", "end": "2018-08-30" },
+        "t2": { "start": "2021-05-01", "end": "2021-08-30" }
+    },
+    "peru_gold_mining": {
+        "description": "Illegal mining, turning forest into sand/slurry",
+        "bbox": [-70.55, -12.95, -70.35, -12.75],
+        "t1": { "start": "2017-06-01", "end": "2017-09-01" },
+        "t2": { "start": "2020-06-01", "end": "2020-09-01" }
+    },
+    "paraguay_chaco_agriculture": {
+        "description": "Dry forest clearing for cattle, geometric shapes",
+        "bbox": [-60.5, -22.2, -60.2, -21.9],
+        "t1": { "start": "2018-01-01", "end": "2018-05-01" },
+        "t2": { "start": "2020-01-01", "end": "2020-05-01" }
+    },
+    "australia_kangaroo_island_fire": {
+        "description": "Massive bushfires, rapid loss in 2 months",
+        "bbox": [136.7, -35.9, 137.1, -35.7],
+        "t1": { "start": "2019-10-01", "end": "2019-11-30" },
+        "t2": { "start": "2020-02-01", "end": "2020-03-30" }
     }
-}
 }

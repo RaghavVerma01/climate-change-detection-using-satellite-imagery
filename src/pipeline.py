@@ -25,19 +25,19 @@ def run_pipeline(config_path="config/regions.json"):
         for tile in tiles:
             tid = tile["tile_id"]
             tbbox = tile["bbox"]
-
+            unique_id = f"{region_name}_{tid}"
             logger.info(f"Processing tile: {tid}")
 
             #t1 composite
             img_t1, region = get_s2_composite(tbbox,t1["start"],t1["end"])
-            export_image(img_t1,region,f"{tid}_t1")
+            export_image(img_t1, region, f"{unique_id}_t1")
 
             #t2 composite
             img_t2,region = get_s2_composite(tbbox,t2["start"],t2["end"])
-            export_image(img_t2,region,f"{tid}_t2")
+            export_image(img_t2, region, f"{unique_id}_t2")
 
             metadata_rows.append([
-                tid,region_name,
+                unique_id,region_name,
                 t1["start"],t1["end"],
                 t2["start"],t2["end"],
                 f"{tid}_t1.tif",

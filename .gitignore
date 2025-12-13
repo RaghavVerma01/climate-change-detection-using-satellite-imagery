@@ -1,0 +1,13 @@
+sat-venv/
+venv/
+
+downloads/
+dataset/
+masks/
+dataset.zip
+
+__pycache__/
+app/
+
+all_output/
+all_output.zip
